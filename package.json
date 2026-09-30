@@ -1,0 +1,13 @@
+{
+  "name": "ai-website-cloner",
+  "version": "1.0.0",
+  "description": "AI-Powered Frontend Website Cloning Agent",
+  "private": true,
+  "scripts": {
+    "install:all": "cd agent && npm install && cd ../ui && npm install",
+    "dev:agent": "cd agent && npm run dev",
+    "dev:ui": "cd ui && npm run dev",
+    "dev": "start \"AI Agent\" cmd /k \"cd agent && npm run dev\" && start \"UI\" cmd /k \"cd ui && npm run dev\"",
+    "setup": "npm run install:all && npx playwright install chromium"
+  }
+}
